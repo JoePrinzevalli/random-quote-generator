@@ -64,32 +64,40 @@ let quotes = [
  * `getRandomQuote` function
 ***/
 
-let getRandomQuote = (prop) => {
+ const getRandomQuote = (prop) => {
   getRandomNumber = Math.floor(Math.random() * quotes.length);
   return quotes[getRandomNumber];
 };
  
-console.log( getRandomQuote() );
+
 
 /***
  * `printQuote` function
 ***/
-let html;
+
 
 const printQuote = () => {
   let randomQuote = getRandomQuote();
-  let html = `<p class="quote"> ${randomQuote.quote } </p>
-  <p class="source"> ${randomQuote.source} 
   
-  if (  randomQuote.includes( quotes.citation ) ) {
-    <span class="citation"> ${randomQuote.citation} </span>
-  };
-  if ( randomQuote.includes( quotes.year ) ) {
+  let html = `<p class="quote"> ${randomQuote.quote } </p>
+              <p class="source"> ${randomQuote.source} 
+
+    if (  randomQuote.includes( quotes.citation ) ) {
+      <span class="citation"> ${randomQuote.citation} </span>
+    }
+    if ( randomQuote.includes( quotes.year ) ) {
     <span class="year"> ${randomQuote.year} </span>
-  };   
-  </p>`
+    } 
+    </p>`;
+  
+
+  return html;
 };
-console.log( printQuote() );
+
+document.getElementById('quote-box').innerHTML = printQuote(); 
+
+ 
+
 
 
 /***
@@ -98,3 +106,5 @@ console.log( printQuote() );
 ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+
+
