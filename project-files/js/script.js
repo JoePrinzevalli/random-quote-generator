@@ -88,6 +88,7 @@ let quotes = [
  This function also displays a new background color, every time a new quote is presented.
 ***/
 
+// Defining variables //
 let html;
 let red;
 let green;
@@ -123,28 +124,21 @@ let printQuote = () => {
    
   
   return html;
-  
-  
+ 
 };
 
 
 
-
-
-  
-
-
 /***
  * `setInterval()` 
- This will dispaly a new quote every 15 seconds automatically.
+ This will dispaly a new quote every 10 seconds automatically.
  
 ***/
 
-window.setInterval('printQuote()', 50000);
-function printQuote() {
-  window .location.reload();
-}
-  
+
+setInterval(printQuote, 10000);
+
+
 
 
 
