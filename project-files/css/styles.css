@@ -8,7 +8,7 @@
 body {
   background-color: rgb(58, 193, 98);
   color: white;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Playfair Display', serif;
   padding: 5px;
 }
 
@@ -113,6 +113,9 @@ h1 {
 .year:before {
   content: ", ";
   font-style: normal;
+}
+.tags {
+  font-weight: bold;
 }
 
 @media (min-width: 768px) {

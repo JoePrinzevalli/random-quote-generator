@@ -107,7 +107,7 @@ let printQuote = () => {
         html+= `<span class="citation"> ${randomQuote.citation}</span>`
       }; 
       if ( randomQuote.tags ) {
-        html+= `<span class="year"> <small>${randomQuote.tags}</small></span>`
+        html+= `<span class="tags"> <small>${randomQuote.tags}</small></span>`
       };
       if ( randomQuote ) {
         red = Math.floor(Math.random() * 256);
