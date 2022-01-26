@@ -122,8 +122,7 @@ let printQuote = () => {
       };
       html +=`</p>`;
   
-  return html;
- 
+      document.getElementById('quote-box').innerHTML = html;  
 };
 
 
@@ -134,20 +133,7 @@ let printQuote = () => {
  
 ***/
 setInterval(printQuote, 10000)
-
-
-/* this function is here just to test the setInterval function----
-Still not sure  why it wont work with printQuote----
-maybe has something to do with why the button wont work in the browser
-*/
-function alertHi () {
-  alert('hi!');
-}
-window.setInterval(alertHi, 5000) 
-
-
-
-document.getElementById('quote-box').innerHTML = printQuote(); 
+ 
 
 
 
