@@ -121,7 +121,6 @@ let printQuote = () => {
             </style>`
       };
       html +=`</p>`;
-   
   
   return html;
  
@@ -134,14 +133,17 @@ let printQuote = () => {
  This will dispaly a new quote every 10 seconds automatically.
  
 ***/
+setInterval(printQuote, 10000)
 
 
-setInterval(printQuote, 10000);
-
-
-
-
-
+/* this function is here just to test the setInterval function----
+Still not sure  why it wont work with printQuote----
+maybe has something to do with why the button wont work in the browser
+*/
+function alertHi () {
+  alert('hi!');
+}
+window.setInterval(alertHi, 5000) 
 
 
 
